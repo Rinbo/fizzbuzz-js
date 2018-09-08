@@ -1,5 +1,7 @@
 # Fizzbuzz JavaScript Challange
 
+Link to gh-pages: https://rinbo.github.io/fizzbuzz-js/
+
 - Question 1. Explain what the following lines of code do:
 ~~~
 let  fizzBuzz = fs.readFileSync('./src/js/fizz-buzz.js');
