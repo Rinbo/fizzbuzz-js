@@ -5,23 +5,29 @@
 let  fizzBuzz = fs.readFileSync('./src/js/fizz-buzz.js');
 eval( fizzBuzz + `\nexports.FizzBuzz = FizzBuzz;`)
 ~~~
+A: The fs.readFileSync method seems to take the file path and store whatever is at that path into a memory buffer. The eval function takes the variable containing the buffer and a new line calling on exports.FizzBuzz potentially setting it equal to the FizzBuzz function. I have no idea why though.
 
 - Question 2. Explain why we are placing the
 ~~~
 let fizzBuzz = new FizzBuzz
 ~~~
 outside the ```it``` block?
+A: I would assume that we do this to make it local to that descibe block and avoiding conflicts with outside calls.
 
 - Question 3. Explain the difference between using === and == in JS?
+A: '==' performs type conversion before comparing. '===' does not. The latter is therefore more picky since both value and type must match. Example:
+"2" == 2 => true
+"2" === 2 => false
+2 === 2 => true
 
 - Question 4. Explain why we are moving (number % 5 === 0) to the top?
-A: There is no reason for this. The important thing is that the conditional for checking divisibility with 15 is declared first, since both 3 and 5 are factors of 15. If a number is not divisible by 15 all that is left is to check if it is either divisible by 3 or if it is divisible by 5. These two remaining cases are mutually exclusive and can thus be checked in any order.
+A: There is no reason for this. The important thing is that the conditional for checking divisibility with 15 is declared first, since both 3 and 5 are factors of 15. If a number is not divisible by 15 all that is left to do is to check if the number is either divisible by 3 or if it is divisible by 5. These two remaining cases are mutually exclusive and can thus be checked in any order.
 
 - Question 5. Explain the difference between feature and unit test?
-A:
+A: The unit test checks the internal logic of the code while the feature test checks the functionality of the end product (user interface).
 
-- Question 6. Eplain what expectations in the context of testing are?
-A:
+- Question 6. Explain what expectations in the context of testing are?
+A: It simply states what we expect a certain feature/function to do and compares it to what it actually does.
 
 Question 7: Write a line to line explanation of what is happening in this code:
 ~~~
