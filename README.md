@@ -39,3 +39,6 @@ Question 7: Write a line to line explanation of what is happening in this code:
         })
     </script>
 ~~~
+
+- Question 8: Explain what a CDN (Content Delivery Network) is?
+A: A network of servers and data centers that are sprea out geographically so that it can deliver its services with high performance, low latency and a high degree of availiablity. It prioritizes servers/data centers closest to the client to deliver the content. Mostly used for delivery of web content.
